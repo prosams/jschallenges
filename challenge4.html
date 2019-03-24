@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 5</title>
+    <style>
+    body{
+        margin: 2%;
+        border: 1px solid black;
+        background-color: #b3b3b3;
+    }
+    #image{
+        line-height:325px;
+        width: 388px;
+        height: 325px;
+        border:5px solid black;
+        margin:0 auto;
+        background-repeat: no-repeat;
+        color:#FFFFFF;
+        text-align: center;
+        background-color: #8e68ff;
+        background-size: 100%;
+        margin-bottom:25px;
+        font-size:150%;
+    }
+    .preview{
+        width:10%;
+        margin-left:17%;
+        border: 10px solid black;
+    }
+    img{
+        width:95%;
+    }
+    h1{
+        text-align: center;
+    }
+    </style>
+
+    <script>
+    function upDate(previewPic){
+        document.querySelector('#image').innerHTML = previewPic.alt;
+        document.querySelector('#image').style.backgroundImage  = 'url(' + previewPic.src + ')';
+        }
+
+    /* In this function you should
+    1) change the url for the background image of the div with the id = "image" to the source file of the preview image
+
+    2) Change the text  of the div with the id = "image" to the alt text of the preview image
+    */
+
+	function unDo(){
+        document.querySelector('#image').innerHTML = "Hover or tab over/into an image below.";
+        document.querySelector('#image').style.backgroundImage = 'url()';
+        }
+
+     /* In this function you should
+    1) Update the url for the background image of the div with the id = "image" back to the orginal-image.  You can use the css code to see what that original URL was
+
+    2) Change the text  of the div with the id = "image" back to the original text.  You can use the html code to see what that original text was
+    */
+    </script>
+</head>
+
+<body>
+    <h1>Challenge 5</h1>
+        <div id = "image">
+            Hover or tab over/into an image below.
+        </div>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "1"
+            alt = "crab figure holding a pen"
+            src = "pics/crab.jpeg"
+            onmouseover = "upDate(this)" onmouseleave = "unDo()" onfocus="upDate(this)" onblur = "unDo()">
+
+        <img class = "preview" tabindex = "2"
+            alt = "frog wearing a photoshopped hat"
+            src = "pics/froghat.png"
+            onmouseover = "upDate(this)" onmouseleave = "unDo()" onfocus="upDate(this)" onblur = "unDo()">
+
+        <img class = "preview" tabindex = "3"
+            src = "pics/hamster.jpeg"
+            alt = "a meme of a hamster freaking out"
+            onmouseover = "upDate(this)" onmouseleave = "unDo()" onfocus="upDate(this)" onblur = "unDo()">
+
+        <img class = "preview" tabindex = "4"
+            src = "pics/mushroom.png"
+            alt = "a sad mushroom cartoon figure"
+            onmouseover = "upDate(this)" onmouseleave = "unDo()" onfocus="upDate(this)" onblur = "unDo()">
+
+        <img class = "preview" tabindex = "5"
+            src = "pics/ramen.png"
+            alt = "cartoon ramen bowl"
+            onmouseover = "upDate(this)" onmouseleave = "unDo()" onfocus="upDate(this)" onblur = "unDo()">
+
+        <img class = "preview" tabindex = "6"
+            src = "pics/ninja.png"
+            alt = "plastic ninja figurines"
+            onmouseover = "upDate(this)" onmouseleave = "unDo()" onfocus="upDate(this)" onblur = "unDo()">
+</body>
+</html>
